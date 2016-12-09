@@ -35,7 +35,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "mocha": "^3.1.2",
-    "phantomjs-prebuilt": "^2.1.13",
+    "phantomjs-prebuilt": "^2.1.14",
     "rimraf": "^2.5.4",
     "rollup": "^0.36.3",
     "rollup-plugin-buble": "^0.14.0",
