@@ -10,7 +10,7 @@
     "object-assign": "^4.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.18.0",
     "babel-loader": "^6.2.7",
     "babel-plugin-istanbul": "^3.0.0",
