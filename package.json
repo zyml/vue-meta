@@ -44,6 +44,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "snazzy": "^6.0.0",
     "standard": "^10.0.0",
+    "typescript": "^2.3.2",
     "uglify-js": "^2.7.4",
     "update-section": "^0.3.3",
     "vue": "^2.0.3",
@@ -54,9 +55,11 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },
+  "typings": "types/index.d.ts",
   "files": [
     "lib",
-    "yarn.lock"
+    "yarn.lock",
+    "types/*.d.ts"
   ],
   "homepage": "https://github.com/declandewet/vue-meta",
   "keywords": [
@@ -100,7 +103,9 @@
     "pretest": "npm run lint",
     "preversion": "npm run toc",
     "release": "npm publish",
-    "test": "cross-env NODE_ENV=test karma start karma.conf.js",
+    "test": "npm run test:types && npm run test:unit",
+    "test:unit": "cross-env NODE_ENV=test karma start karma.conf.js",
+    "test:types": "tsc -p types/test",
     "toc": "doctoc README.md --title '# Table of Contents'",
     "update-cdn": "babel-node scripts/update-cdn.js"
   },
